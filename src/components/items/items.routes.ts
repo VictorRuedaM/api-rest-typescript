@@ -1,12 +1,15 @@
 import { Router } from "express";
+import * as controller from './controllers'
 
 
 
 const router = Router();
 
-router.get('/', (req, res) => {
-  res.send('Items component!!')
-})
+router.get('/', controller.getItems);
+router.get('/:id', controller.getItem);
+router.post('/', controller.createItem);
+router.put('/', controller.updateItem);
+router.delete('/', controller.deleteItem);
 
 
 
