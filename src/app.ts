@@ -5,6 +5,8 @@ import routes from './routes/index.routes';
 
 const app = express();
 
+// Settings
+app.use(express.json());
 
 // Middlewares 
 app.use(morgan('dev'));
